@@ -1,0 +1,33 @@
+.chat-main
+  .chat-main__group-info
+    .group-info__group-name
+      %p 卵焼き
+      %ul.group-info__group-member-list
+        %p Member:
+        %li.group-member
+          田中
+        %li.group-member
+          山田
+        %li.group-member
+          佐藤
+        %li.group-member
+          工藤
+    .group-info__group-edt
+      = link_to "#" do
+        Edit
+  .chat-main__message-list
+    %ul.messages
+      %li.message
+        %p.message__name
+        %p.message__data
+        %p.message__text
+  .chat-main__message-from
+    .input-box
+      %input{type:"text",class:"input-box__text",placeholder:"type a message"}
+      %label{class:"input-box__image"}
+        = icon('fas', 'image')
+        %input{type:"file",accept:"image/*",class:"input-box__image__file"}
+    %input{type:"submit",value:"Send",class:"submit-btn"}
+
+    
+
